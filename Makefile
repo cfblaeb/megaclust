@@ -37,52 +37,52 @@ include config/$(ARCH).def
 default: usage
 
 4col: prep
-	$(CC) $(CFLAGS) -lm -o bin/dselect4     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect4     $(SRC)/dselect.c -lm 
 	$(MPICC) $(CFLAGS) -o bin/dclust4      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -o bin/cextract4    $(SRC)/cextract.c
 
 8col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_8 -o bin/dselect8     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect8     $(SRC)/dselect.c -lm -DCOLUMNS_8
 	$(MPICC) $(CFLAGS) -DCOLUMNS_8 -o bin/dclust8      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_8 -o bin/cextract8    $(SRC)/cextract.c
 
 12col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_12 -o bin/dselect12     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect12     $(SRC)/dselect.c -lm -DCOLUMNS_12
 	$(MPICC) $(CFLAGS) -DCOLUMNS_12 -o bin/dclust12      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_12 -o bin/cextract12    $(SRC)/cextract.c
 
 16col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_16 -o bin/dselect16     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect16     $(SRC)/dselect.c -lm -DCOLUMNS_16
 	$(MPICC) $(CFLAGS) -DCOLUMNS_16 -o bin/dclust16      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_16 -o bin/cextract16    $(SRC)/cextract.c
 
 24col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_24 -o bin/dselect24     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect24     $(SRC)/dselect.c -lm -DCOLUMNS_24 
 	$(MPICC) $(CFLAGS) -DCOLUMNS_24 -o bin/dclust24      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_24 -o bin/cextract24    $(SRC)/cextract.c
 
 32col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_32 -o bin/dselect32     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect32     $(SRC)/dselect.c -lm -DCOLUMNS_32 
 	$(MPICC) $(CFLAGS) -DCOLUMNS_32 -o bin/dclust32      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_32 -o bin/cextract32    $(SRC)/cextract.c
 
 48col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_48 -o bin/dselect48     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect48     $(SRC)/dselect.c -lm -DCOLUMNS_48 
 	$(MPICC) $(CFLAGS) -DCOLUMNS_48 -o bin/dclust48      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_48 -o bin/cextract48    $(SRC)/cextract.c
 
 52col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_52 -o bin/dselect52     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect52     $(SRC)/dselect.c -lm -DCOLUMNS_52
 	$(MPICC) $(CFLAGS) -DCOLUMNS_52 -o bin/dclust52      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)    -DCOLUMNS_52 -o bin/cextract52    $(SRC)/cextract.c
 
 64col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_64 -DCOLUMNS_BY_32BLOCK -o bin/dselect64     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect64     $(SRC)/dselect.c -lm -DCOLUMNS_64 -DCOLUMNS_BY_32BLOCK
 	$(MPICC) $(CFLAGS)  -DCOLUMNS_64 -DCOLUMNS_BY_32BLOCK -o bin/dclust64      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)     -DCOLUMNS_64 -DCOLUMNS_BY_32BLOCK -o bin/cextract64    $(SRC)/cextract.c
 
 128col: prep
-	$(CC) $(CFLAGS) -lm -DCOLUMNS_BY_32BLOCK -o bin/dselect128     $(SRC)/dselect.c
+	$(CC) $(CFLAGS) -o bin/dselect128     $(SRC)/dselect.c -lm -DCOLUMNS_BY_32BLOCK
 	$(MPICC) $(CFLAGS)  -DCOLUMNS_BY_32BLOCK -o bin/dclust128      $(SRC)/dclust.c
 	$(CC) $(CFLAGS)     -DCOLUMNS_BY_32BLOCK -o bin/cextract128    $(SRC)/cextract.c
 
